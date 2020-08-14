@@ -33,6 +33,9 @@ const saveNextPage = (metadata) => {
  * Handle when a user clicks on a trend
  */
 const selectTrend = (e) => {
+    const text = e.innerText;
+    document.getElementById('user-search-input').value = text;
+    getTwitterData();
 }
 
 /**
@@ -48,18 +51,19 @@ const nextPageButtonVisibility = (metadata) => {
 const buildTweets = (tweets, nextPage) => {
     let twitterContent = "";
     tweets.map((tweet)=>{
+        const createdDate = moment(tweets.created_at).fromNow()
         twitterContent += `
         <div class="tweet-container">
             <div class="tweet-user-info">
-                <div class="tweet-user-profile">
+                <div class="tweet-user-profile" style="background-image: url(${tweet.user.profile_image_url_https})">
 
                 </div>
                 <div class="tweet-user-name-container">
                     <div class="tweet-user-fullname">
-                        Gregg Cline
+                       ${tweet.user.name}
                     </div>
                     <div class="tweet-user-username">
-                        @cline
+                        ${tweet.user.screen_name}
                     </div>
                 </div> 
             </div>
@@ -75,7 +79,7 @@ const buildTweets = (tweets, nextPage) => {
                 ${tweet.full_text}
             </div>
             <div class="tweet-date-container">
-                20 hours ago
+                ${createdDate}
 
             </div>
         </div>

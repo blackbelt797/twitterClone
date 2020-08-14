@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="style/style.css">
         <link rel="stylesheet" href="style/tweet.css">
         <script src="https://kit.fontawesome.com/c939d0e917.js" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
     </head>
     <body>
         <div class="container home-page">
@@ -38,7 +39,7 @@
                             </div>
                             <div class="tweet-user-name-container">
                                 <div class="tweet-user-fullname">
-                                    Gregg Cline
+                                  
                                 </div>
                                 <div class="tweet-user-username">
                                     @cline
@@ -57,7 +58,7 @@
                             <div class="tweet-image"></div>
                         </div>
                         <div class="tweet-text-container">
-                           Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+
                         </div>
                         <div class="tweet-date-container">
                             20 hours ago
@@ -71,9 +72,9 @@
                     <div class="tweets-trending">
                         <h5>Trends for you</h5>
                         <ul>
-                            <li>#Coding</li>
-                            <li>#JavaScript</li>
-                            <li>#Python</li>
+                            <li onclick="selectTrend(this)">#Coding</li>
+                            <li onclick="selectTrend(this)">#JavaScript</li>
+                            <li onclick="selectTrend(this)">#Python</li>
                         </ul>
                     </div>
                 </div>
