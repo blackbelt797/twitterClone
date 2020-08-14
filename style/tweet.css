@@ -66,6 +66,8 @@
     background-color: white;
     border: 1px solid #979797;
     border-radius: 50%;
+    background-position: center;
+    background-size: center;
     
 }
 .tweet-user-profile {
